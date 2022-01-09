@@ -95,5 +95,12 @@ The following command must be used in the terminal to set an environment variabl
 
 ---
 
+## Introducing an ORM (Object-Relational Mapper)
 
-*Disclaimer: this is a code along project from [Code Institute](https://codeinstitute.net/)'s **First look at an RDBMS ** module*
+### Install the "SQLAlchemy" Python package
+- `pip3 install SQLAlchemy`
+
+---
+
+
+*Disclaimer: this is a code along project from [Code Institute](https://codeinstitute.net/)'s **Database Management Systems** module*
