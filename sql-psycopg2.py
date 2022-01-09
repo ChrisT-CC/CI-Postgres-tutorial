@@ -38,6 +38,33 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
 
 
+# ******************************** Tests ********************************
+# CI Challange:
+# 1. Query the database for another artist or composer
+# 2. Query the database using "test" as the composer
+# ***********************************************************************
+
+# ***********************************************************************
+# 1. Select only "Metallica" from the "Artist" table
+# cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Metallica"])
+
+
+# Select all tracks for Mettalica
+# cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Metallica"])
+# Select all albums for Mettalica
+# cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s', [50])
+# cursor.execute('SELECT "Title" FROM "Album" WHERE "ArtistId" = %s', [50])
+# Select all tracks for Metallica's "Master of puppets" album
+# cursor.execute('SELECT "Name" FROM "Track" WHERE "AlbumId" = %s', [152])
+# ***********************************************************************
+
+
+# ***********************************************************************
+# 2. Query the database using "test" as the composer
+cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["test"])
+# ***********************************************************************
+
+
 # Fetch the results (multiple)
 results = cursor.fetchall()
 
