@@ -76,12 +76,22 @@ Switzerland = Country(
     Description="Switzerland, officially called the Swiss Federation, is a small country in Central Europe made up of 16,000 square miles of glacier-carved Alps, lakes and valleys. It’s one of the world’s wealthiest countries, and has been well-known for centuries for its neutrality."
 )
 
+UK = Country(
+    Name="UK",
+    Capital_city="London",
+    Population=67.22,
+    Surface_area="242,495 km²",
+    Description="The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe. England – birthplace of Shakespeare and The Beatles – is home to the capital, London, a globally influential centre of finance and culture. England is also site of Neolithic Stonehenge, Bath’s Roman spa and centuries-old universities at Oxford and Cambridge."
+)
+
 # Add each country instance to the session
 # session.add(Canada)
 # session.add(Denmark)
 # session.add(Sweden)
 # session.add(Norway)
 # session.add(Switzerland)
+# session.add(UK)
+
 
 # Updating a single record
 # country = session.query(Country).filter_by(Rank=1).first()
@@ -94,11 +104,18 @@ Switzerland = Country(
 #     country.Description = "Good country"
 
 # Deleting a single record
+# country = session.query(Country).filter_by(Name="UK").first()
+# session.delete(country)
 
 # Deleting multiple records
+# multiple_countries = session.query(Country)
+# for country in multiple_countries:
+#     session.delete(country)
+#     session.commit()
+
 
 # Commit session to the database
-session.commit()
+# session.commit()
 
 # Query the database to find all countries
 countries = session.query(Country)
