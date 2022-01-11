@@ -76,11 +76,11 @@ Switzerland = Country(
 )
 
 # Add each country instance to the session
-session.add(Canada)
-session.add(Denmark)
-session.add(Sweden)
-session.add(Norway)
-session.add(Switzerland)
+# session.add(Canada)
+# session.add(Denmark)
+# session.add(Sweden)
+# session.add(Norway)
+# session.add(Switzerland)
 
 # Updating a single record
 
@@ -94,3 +94,15 @@ session.add(Switzerland)
 session.commit()
 
 # Query the database to find all countries
+countries = session.query(Country)
+for country in countries:
+    print(
+        country.Rank,
+        country.Name,
+        country.Capital_city,
+        country.Population,
+        " millions",
+        country.Surface_area,
+        country.Description,
+        sep=" | "
+    )
